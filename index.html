@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content="JavaScript practice code" />
     <title>JavaScript Practice</title>
+    <link rel="icon" type="image/png" href="/img/favicon-16x16.png" />
     <style>
       * {
         padding: 0;
@@ -18,27 +19,37 @@
     <script>
       "use strict";
 
-      class Rectangle {
-        constructor(height, width) {
-          this.height = height;
-          this.width = width;
+      const testHashCode = () => {
+        class Rectangle {
+          constructor(height, width) {
+            this.height = height;
+            this.width = width;
+          }
+
+          toString() {
+            return this.height + "x" + this.width;
+          }
         }
 
-        toString() {
-          return this.height + "x" + this.width;
-        }
-      }
+        const rectangle = new Rectangle(10, 20);
+        const rectangle2 = new Rectangle(20, 30);
 
-      const rectangle = new Rectangle(10, 20);
-      const rectangle2 = new Rectangle(20, 30);
+        console.assert(
+          rectangle.toString() !== rectangle2.toString(),
+          `Hash code data test complete - the rectangle dimensions ${rectangle} and ${rectangle2} are equal.`
+        );
+        console.assert(
+          hashCode(rectangle.toString()) !== hashCode(rectangle2.toString()),
+          `Hash code test complete - the hash codes ${hashCode(
+            rectangle.toString()
+          )} and ${hashCode(rectangle2.toString())} are equal.`
+        );
+      };
 
       const hashCode = (s) =>
         s.split("").reduce((a, b) => ((a << 5) - a + b.charCodeAt(0)) | 0, 0);
 
-      console.log(rectangle.toString());
-      console.log(hashCode(rectangle.toString()));
-      console.log(rectangle2.toString());
-      console.log(hashCode(rectangle2.toString()));
+      testHashCode();
     </script>
   </body>
 </html>
