@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="JavaScript practice code" />
+    <title>JavaScript Practice 2</title>
+    <link rel="icon" type="image/png" href="/img/favicon-16x16.png" />
+  </head>
+  <body>
+    <script>
+      "use strict";
+
+      const sentence = "JavaScript is awesome...";
+      const greeting = "Hello world!";
+      const firstName = "FirstName";
+      const lastName = "LastName";
+      const spacesGreeting = "     Hello World!      ";
+      const irisJohansenBooks =
+        "The Face Of Deception, The Killing Game, The Search, Body Of Lies, Blind Alley, Countdown, Stalemate, Quicksand, Blood Game, Eight Days To Live, Chasing The Night, Eve, Quinn, Bonnie, Sleep No More, Taking Eve, Hunting Eve, Silencing Eve, Shadow Play, Hide Away, Night And Day, Mind Game, Shattered Mirror, Vendetta, Dark Tribute, Smokescreen";
+      const stringTen = "10";
+      const booleanTrue = true;
+      const numberTen = 10;
+      const numberEightWithFloat = 8.2567;
+      const firstNameWebsite = "FirstName";
+      const lastNameWebsite = "LastName";
+      const sentenceWebsite = "This website is a website for websites.";
+      const theTruth = true;
+      const numberTenWebsite = 10;
+      const numberFifteen = 15;
+      const numberTwentyFive = 25;
+      const funnyString = "The bears are in the same location as the giraffes.";
+      const seriousString =
+        "If a giraffe has a sore throat, where does it start and end?";
+      const fruits = "Apples, Bananas, Strawberries, bananas, Grapes, Oranges";
+      const firstSentence = "Hello my name is ";
+      const myName = "My Name";
+      const locationIndex = funnyString.indexOf("location");
+      const lastTheIndex = funnyString.indexOf("the", 18);
+      const lastIndexOfThe = funnyString.lastIndexOf("the");
+      const thirdAIndex = seriousString.indexOf(
+        "a",
+        seriousString.indexOf("a") + 1
+      );
+      const modifiedFruits = fruits.replace(/strawberries/i, "Pear");
+      const orangeOnly = fruits.slice(
+        fruits.indexOf("Oranges"),
+        fruits.indexOf("Oranges") + "Oranges".length
+      );
+      const fullName = firstSentence.concat(myName);
+      const stringTenAgain = "10";
+      const stringThree = "3";
+      let numberTenAgain = 10;
+      let numberThree = 3;
+      const numberTwo = 2;
+      const numberEightWithFloatAgain = 8.2567;
+      const thirteen = numberTenAgain + numberThree;
+      const twelve = numberTenAgain - numberTwo;
+      const thirty = numberTenAgain * numberThree;
+      const five = numberTenAgain / numberThree;
+      const three = numberTen % numberThree;
+      const numberNegativeFiveFloat = numberThree - numberEightWithFloatAgain;
+      const eleven = numberTenAgain++;
+      const nine = numberTenAgain--;
+      let numberTenAgainReduced;
+      const four = ++numberThree;
+      const fourAgain = numberThree++;
+      const tenStringThing = numberTen + stringTenAgain;
+      const tenStringThingAgain = stringTenAgain + stringThree;
+      const sentence1 =
+        "Oscar has 5 kids and a beautiful wife named Stella. 4 of the children are identical twins and the other child is the oldest by 1 year.";
+      const sentence2 =
+        "The family has 6 relatives living in the San Antonio area, and 2 more relatives who live within 100 miles of the area.";
+      let sanAntonioStringResult = sentence2.slice(41, 52);
+      const sentence3 =
+        "This summer they plan on traveling to El Paso to visit as many family members as possible.";
+      let resultSentence1 = sentence1.match(/[0-9]/g);
+      let result1Sentence1 = resultSentence1[0];
+      let result2Sentence1 = resultSentence1[1];
+      let result3Sentence1 = resultSentence1[2];
+      let resultSentence2 = sentence2.match(/[0-9]/g);
+      let result1Sentence2 = resultSentence2[0];
+      let result2Sentence2 = resultSentence2[1];
+      let result3Sentence2 = resultSentence2[2];
+      let result4Sentence2 = resultSentence2[3];
+      let result5Sentence2 = resultSentence2[4];
+      let oneHundredResultSentence2 =
+        result3Sentence2 + result4Sentence2 + result5Sentence2;
+      let tenResult = result3Sentence2 + result4Sentence2;
+      let zeroResult = result5Sentence2;
+      let sumTotal;
+      let userInput1 = 0;
+      let userInput2 = 0;
+      let multResult;
+      let isOdd;
+      let grades2;
+      const kayScarpettaSeries = [
+        "Postmortem",
+        "Body of Evidence",
+        "All That Remains",
+        "Cruel and Unusual",
+        "The Body Farm",
+        "From Potter's Field",
+        "Cause of Death",
+        "Unnatural Exposure",
+        "Point of Origin",
+        "Black Notice",
+        "The Last Precinct",
+        "Blow Fly",
+        "Trace",
+        "Predator",
+        "Book of the Dead",
+        "Scarpetta",
+        "The Scarpetta Factor",
+        "Port Mortuary",
+        "Red Mist",
+        "The Bone Bed",
+        "Dust",
+        "Flesh and Blood",
+        "Depraved Heart",
+        "Chaos",
+      ];
+      const rizzoliAndIslesSeries = [
+        "The Surgeon",
+        "The Apprentice",
+        "The Sinner",
+        "Body Double",
+        "Vanish",
+        "The Mephisto Club",
+        "The Keepsake/Keeping the Dead",
+        "Ice Cold",
+        "The Silent Girl",
+        "The Killing Place",
+        "Last to Die",
+        "Die Again",
+        "I Know a Secret",
+      ];
+      const eveDuncanSeries =
+        "The Face Of Deception, The Killing Game, The Search, Body Of Lies, Blind Alley, Countdown, Stalemate, Quicksand, Blood Game, Eight Days To Live, Chasing The Night, Eve, Quinn, Bonnie, Sleep No More, Taking Eve, Hunting Eve, Silencing Eve, Shadow Play, Hide Away, Night And Day, Mind Game, Shattered Mirror, Vendetta, Dark Tribute, Smokescreen";
+      let grades = [
+        83, 93, 86, 75, 96, 84, 80, 77, 73, 94, 91, 93, 86, 84, 82, 90,
+      ];
+      const deadMysteryWriters = [
+        "Agatha Christie",
+        "Robert B. Parker",
+        "Arthur Conan Doyle",
+        "Edgar Allan Poe",
+        "Earl Stanley Gardner",
+        "Sue Grafton",
+      ];
+      const livingMysteryWriters = [
+        "Patricia Cornwell",
+        "James Ellroy",
+        "Michael Connelly",
+        "Ian Rankin",
+        "Kathy Reichs",
+        "John Grisham",
+        "David Baldacci",
+        "James Patterson",
+        "P. D. James",
+        "Tess Gerritsen",
+        "Iris Johansen",
+        "Janet Evanovich",
+        "Joanne Fluke",
+      ];
+      let mysteryWriters;
+      const sitesTopics = ["JavaScript", "C", "C++", "C#", "Python"];
+      const dayNames = [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ];
+      const firstName2 = "Jes";
+      const yearBorn = 1900;
+      let loopCount = 0;
+      let firstName3 = "FirstName";
+      let lastName3 = "LastName";
+      let dob = 1900;
+      let address = "JavaScript City";
+
+      const printFullName = () => {
+        console.log(firstName3 + " " + lastName3);
+      };
+
+      const calculateAge = (yourDob) => {
+        let age = new Date().getFullYear() - yourDob;
+        return age;
+      };
+
+      const printPersonalInfo = (calculateAge) => {
+        console.log(
+          "My name is " +
+            firstName3 +
+            " " +
+            lastName3 +
+            ", I am " +
+            calculateAge(dob) +
+            " years young and I live at " +
+            address +
+            "."
+        );
+      };
+
+      try {
+        console.log(
+          'The variable "sentence" that contains a sentence is: ' +
+            sentence.length
+        );
+        console.log(sentence.toUpperCase());
+        console.log(
+          typeof sentence,
+          typeof greeting,
+          typeof firstName,
+          typeof lastName,
+          typeof spacesGreeting,
+          typeof irisJohansenBooks,
+          typeof stringTen,
+          typeof booleanTrue,
+          typeof numberTen,
+          typeof numberEightWithFloat
+        );
+        console.log(firstName + " " + lastName);
+        console.log(irisJohansenBooks.toLowerCase());
+        console.log(firstName + " " + lastName);
+        console.log(
+          "The length of my sentence is: " +
+            sentence.length +
+            " characters long."
+        );
+        console.log(
+          "The sum of " +
+            numberTenWebsite +
+            " and " +
+            numberFifteen +
+            " is equal to " +
+            numberTwentyFive +
+            "."
+        );
+        console.log(
+          "The variable the truth is storing the value: " +
+            theTruth +
+            ". The data type is " +
+            typeof theTruth +
+            "."
+        );
+        console.log(
+          "Task 1: Index of 'location' in funnyString: " + locationIndex
+        );
+        console.log(
+          "Task 2: Index of last 'the' in funnyString: " + lastTheIndex
+        );
+        console.log(
+          "Task 3: Last index of 'the' in funnyString: " + lastIndexOfThe
+        );
+        console.log(
+          "Task 4: Index of the third 'a' in seriousString: " + thirdAIndex
+        );
+        console.log("Task 5: Modified fruits: " + modifiedFruits);
+        console.log("Task 6: 'Orange' only: " + orangeOnly);
+        console.log("Task 7: Concatenated full name: " + fullName);
+        console.log(thirteen);
+        console.log(twelve);
+        console.log(thirty);
+        console.log(five);
+        console.log(three);
+        console.log(numberNegativeFiveFloat);
+        console.log(eleven);
+        console.log(nine);
+        numberTenAgain -= 4;
+        numberTenAgainReduced = numberTenAgain;
+        console.log(numberTenAgainReduced);
+        console.log(numberThree);
+        console.log(four);
+        console.log(fourAgain);
+        console.log(numberThree);
+        console.log(tenStringThing);
+        console.log(tenStringThingAgain);
+        console.log(result1Sentence1);
+        console.log(result2Sentence1);
+        console.log(result3Sentence1);
+        console.log(result1Sentence2);
+        console.log(result2Sentence2);
+        console.log(result3Sentence2);
+        console.log(result1Sentence2);
+        console.log(result2Sentence2);
+        console.log(result3Sentence2);
+        console.log(oneHundredResultSentence2);
+        result1Sentence1 = parseInt(result1Sentence1);
+        result2Sentence1 = parseInt(result2Sentence1);
+        result3Sentence1 = parseInt(result3Sentence1);
+        result1Sentence2 = parseInt(result1Sentence2);
+        result2Sentence2 = parseInt(result2Sentence2);
+        result3Sentence2 = parseInt(result3Sentence2);
+        result4Sentence2 = parseInt(result4Sentence2);
+        result5Sentence2 = parseInt(result5Sentence2);
+        oneHundredResultSentence2 =
+          result3Sentence2 + result4Sentence2 + result5Sentence2;
+        tenResult = parseInt(tenResult);
+        zeroResult = parseInt(zeroResult);
+        sumTotal =
+          result1Sentence1 +
+          result2Sentence1 +
+          result3Sentence1 +
+          result1Sentence2 +
+          result2Sentence2 +
+          tenResult;
+        sentence3.replace("", sanAntonioStringResult);
+
+        while (result3Sentence1 < tenResult + 1) {
+          console.log("I saw " + result3Sentence1 + " car(s) on my trip.");
+          result3Sentence1++;
+        }
+
+        while (userInput1 <= 1 || userInput1 >= 10) {
+          userInput1 = parseInt(userInput1);
+          userInput1 = window.prompt("Enter a number between 1 and 10");
+        }
+
+        while (userInput2 <= 1 || userInput2 >= 10) {
+          userInput2 = parseInt(userInput2);
+          userInput2 = window.prompt("Enter another number between 1 and 10");
+        }
+
+        multResult = userInput1 * userInput2;
+        isOdd = multResult % 2;
+        console.log("The result is " + (isOdd == 1 ? "odd" : "even"));
+        rizzoliAndIslesSeries.sort();
+        grades.push(89);
+        grades2 = grades.toString();
+        grades.pop();
+        grades.shift();
+        grades.unshift(94);
+        grades.splice(9, 0, 98, 71, 63);
+        grades.splice(12, 1);
+        mysteryWriters = deadMysteryWriters.concat(livingMysteryWriters);
+        sitesTopics.push("Java");
+        console.log(
+          "The length of the siteTopics array is " + sitesTopics.length
+        );
+
+        while (loopCount < sitesTopics.length) {
+          console.log(sitesTopics[loopCount]);
+          loopCount++;
+        }
+
+        dayNames.reverse();
+
+        for (let i = 0; i < dayNames.length; i++) {
+          console.log(dayNames[i]);
+        }
+
+        dayNames.shift();
+
+        try {
+          if (dayNames[0] === "Sunday")
+            throw new Error("Error: Sunday should be missing!");
+        } catch (err) {
+          console.log(err);
+        } finally {
+          console.log(
+            firstName2 +
+              " was born in the year " +
+              yearBorn +
+              ". I think the day was either a " +
+              dayNames[1] +
+              " or " +
+              dayNames[4] +
+              "."
+          );
+        }
+
+        printFullName();
+        console.log(calculateAge(dob));
+        printPersonalInfo(calculateAge);
+      } catch (err) {
+        console.error(err);
+      }
+    </script>
+  </body>
+</html>
