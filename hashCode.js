@@ -19,11 +19,11 @@ const testHashCode = () => {
 
     console.assert(
       rectangle.toString() !== rectangle2.toString(),
-      `Hash code data test complete - the rectangle dimensions ${rectangle} and ${rectangle2} are equal.`
+      `Hash code data test failed - the rectangle dimensions ${rectangle} and ${rectangle2} are equal.`
     );
     console.assert(
       hashCode(rectangle.toString()) !== hashCode(rectangle2.toString()),
-      `Hash code test complete - the hash codes ${hashCode(
+      `Hash code test failed - the hash codes ${hashCode(
         rectangle.toString()
       )} and ${hashCode(rectangle2.toString())} are equal.`
     );
